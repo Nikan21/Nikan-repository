@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0%;
+}
+
+#price{
+    border-collapse: collapse;
+}
+
+#price thead{
+   height: 15vh;
+   text-align: center;
+}
+
+#price thead td:nth-child(2+n)/* :not(td:first-child) */{
+    background-color: brown;
+}
+
+#price td {
+    border: 1px solid black;
+}
