@@ -1,0 +1,17 @@
+@import url(./bootstrap-grid.min.css);
+
+.wrapper{
+  border: 1px solid;
+  padding: 10px;
+}
+
+.elem{
+  padding: 5px 0px;
+  border: 1px solid red;
+  text-align: center;
+  min-height: 100px;
+}
+
+/* .elem + .elem{
+  margin-left: 20px;
+} */
