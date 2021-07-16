@@ -1,64 +1,17 @@
-.FirstB {
-  background-color: lightyellow;
-  font-size: 14px;
+@import url(./bootstrap-grid.min.css);
+
+.wrapper{
+  border: 1px solid;
+  padding: 10px;
 }
 
-h3 {
-  color: rgb(108, 108, 201);
-  font-size: 16px;
-  font-style: sans-serif;
-}
-
-.FT {
-  color: rgb(184, 153, 53);
-}
-
-.FO {
-  color: #31a13a;
-}
-
-.allp {
-  font-style: serif;
-  text-decoration: underline 0.2em solid;
-}
-
-.FirstP {
-  text-align: start;
-}
-
-.SecondP {
+.elem{
+  padding: 5px 0px;
+  border: 1px solid red;
   text-align: center;
+  min-height: 100px;
 }
 
-.ThirdP {
-  text-align: end;
-}
-
-.IMG {
-  display: block;
-  margin: auto;
-}
-
-section p {
-  text-decoration: overline 1px solid;
-}
-
-section > p {
-  text-decoration: underline 1px solid;
-}
-
-li {
-  list-style-type: none;
-}
-
-li > a {
-  text-decoration: none;
-}
-
-.Par {
-  display: inline-block;
-}
-
-.All {
-  box-sizing: border-box;
-}
+/* .elem + .elem{
+  margin-left: 20px;
+} */
