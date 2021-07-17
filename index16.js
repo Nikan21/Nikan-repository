@@ -156,9 +156,95 @@ console.log(calcTwoNumbers(3, 4, '-'));
 
 /*1*/
 function getTextFiveStep (text){
+    if (typeof text !== 'string'){
+        return 'Вы ввели неверный тип данных!'
+    }
     for (let i = 0; i < 10; i++){
         console.log(text); 
-    };
+    }
 }
-const res = getTextFiveStep('Hello loop')
+const result = getTextFiveStep('Hello loop')
 
+/*2*/
+function getTextPlusI (text){
+    if (typeof text !== 'string'){
+        return 'Вы ввели неверный тип данных!'
+    }
+    for (let i = 0; i < 5; i++){
+        console.log(text + i);
+    }
+}
+const result1 = getTextPlusI('Loop');
+
+/*3*/
+function getNumberAndReturn (num){
+    if (typeof num !== 'number'){
+        return 'Вы ввели неверный тип данных!';
+    }
+
+    if (isNaN(num)){
+        return false;
+    }
+
+    for (let i = 0; i < 5; i++){
+        console.log(num);
+    }
+
+    return num;
+}
+console.log(getNumberAndReturn(2));
+
+/*4*/
+function calcCreationNum1Num2 (num1, num2){
+    if (typeof num1 !== 'number' || typeof num2 !== 'number'){
+        return 'Вы ввели неверный тип данных';
+    }
+    
+    if (isNaN(num1) || isNaN(num2)){
+        return false;
+    }
+
+    for (let i = 0; i < 5; i++){
+        console.log(num1 * num2);
+    }
+}
+const creation = calcCreationNum1Num2(5, 5);
+
+/* 5, 5* */
+function calcFactorial (num){
+    if (typeof num !== 'number'){
+        return 'Вы ввели неверный тип данных';
+    }
+    
+    if (isNaN(num)){
+        return false;
+    }
+
+    let buffer = 1;
+    for (let i = 1; i <= num; i++){
+        buffer *= i;
+    }
+
+    return buffer;
+}
+console.log(calcFactorial(5));
+
+/*6*/
+function calcNumberPow (val, power){
+    if (typeof val !== 'number' || typeof power !== 'number'){
+        return 'Вы ввели неверный тип данных';
+    }
+    
+    if (isNaN(val) || isNaN(power)){
+        return false;
+    }
+
+    let buffer1 = 1;
+    for( let i = 0; i <2; i++){
+        const pow = Math.pow(val, power);
+        buffer1 *= pow;
+    }
+
+    return buffer1;
+}
+console.log(calcNumberPow(2, 2));
