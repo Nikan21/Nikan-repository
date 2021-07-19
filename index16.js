@@ -112,6 +112,13 @@ function calcNumberInPow (a, b){
 console.log(calcNumberInPow(2, 2));
 
 /*7*/
+/**
+ * Function calc area trapezoid
+ * @param {Number} a Input anybody number
+ * @param {Number} b Input anybody number
+ * @param {Number} h Input anybody number
+ * @returns Area trapezoid
+ */
  function calcAreaTrapezoid (a, b, h){
     if (typeof a !== 'number' || typeof b !== 'number' || typeof h !== 'number'){
         return 'Вы ввели неверный тип данных';
@@ -126,6 +133,14 @@ console.log(calcNumberInPow(2, 2));
 console.log(calcAreaTrapezoid(2, 4, 2));
 
 /*8*/
+/**
+ * Function which calc parameter 'a' with parameter 'b'. And choose sign arifmetic in parameter 'c'. 
+ * If say short about this fuction - this is mini calculate.
+ * @param {Number} a Input anybody number
+ * @param {Number} b Input anybody number
+ * @param {String} c Input sign arifmetic ('+', '-', '*', '/')
+ * @returns 
+ */
 function calcTwoNumbers (a, b, c){
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'string'){
         return 'Вы ввели неверный тип данных';
