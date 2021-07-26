@@ -18,27 +18,54 @@ console.log([Cat, Cat.meow()]);
 const Girafe = {
     age: 12,
     weight: 80,
-    status_sleep: true,
-/*     status_sleep (wake_or_sleep_girafe){
-        if (wake_or_sleep_girafe === true){
-            return 'Не спит';
-        }else{
-            return 'Спит';
-        }
-    }, */
-    height_body: 30,
-    height_neck: 70,
-    full_height (){
-        return this.height_body + this.height_neck;
+    statusSleep: true,
+    heightBody: 30,
+    heightNeck: 70,
+    fullHeight (){
+        return this.heightBody + this.heightNeck;
     },
-    wake_or_sleep_girafe (a){
-        if (a === true){
-            this.status_sleep = true;
-        }else{
-            this.status_sleep = false;
-        }
+    wakeOrSleepGirafe(sleerOrNot){
+        this.statusSleep = sleerOrNot;
+        return sleerOrNot;
     }    
 }
-Girafe.wake_or_sleep_girafe(false)
 console.log(Girafe);
-console.log(Girafe.full_height());
+console.log(Girafe.fullHeight());
+
+/*4*/
+const Motocycle = function (nameModel, tankLiters, modelEngine, numberOfSeats = 1){
+    this.nameModel = nameModel;
+    this.tankLiters = tankLiters;
+    this.modelEngine = modelEngine;
+    this.numberOfSeats = numberOfSeats;
+    this.speed = 0;
+    this.upSpeed = function (upSpeed){
+        if (isNaN(upSpeed)){
+            return 'Неверный тип данных!';
+        }else{
+            this.speed += upSpeed;
+            return this.speed;
+        }
+    };
+    this.downSpeed = function (downSpeed){
+        if (isNaN(downSpeed)){
+            return 'Неверный тип данных!';
+        }
+        this.speed -= downSpeed;
+        if (this.speed < 0){
+            this.speed = 0;
+            return 'Не может быть отрицательная скорость';
+        }else{
+            return this.speed;
+        }
+    };
+    this.stopSpeed = function (stop){
+        if(stop === true){
+            this.speed = 0;
+            return this.speed;
+        }
+    };
+}
+
+const Kastiel = new Motocycle ('Kastiel_v.1', 65, 12345);
+console.log(Kastiel)
