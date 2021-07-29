@@ -7,7 +7,7 @@ console.log(user);
 
 /*2*/
 const Cat = {
-    lenght_tail: 25,
+    lenghtTail: 25,
     meow (){
         return 'Meow';
     }
