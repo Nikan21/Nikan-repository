@@ -20,3 +20,12 @@ const reduseSumm = mobiles.reduce ((accum, value) => {
     return accum + value.price;
 });
 console.log(reduseSumm) */
+
+/* const elem = document.getElementById('First');
+console.log(elem); */
+
+const elems = document.getElementsByClassName("test");
+const array = Array.from(elems);
+
+console.log(array[1]);
+console.log(array.join('\n'));

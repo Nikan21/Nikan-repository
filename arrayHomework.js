@@ -85,16 +85,26 @@ const Product = function (productName, productPrice, quantityInStock){
     this.productName = productName;
     this.productPrice = productPrice;
     this.statusInStock = function () {
-
-
-        const test = this.quantityInStock >= 1
-        
-        return test
+        return this.quantityInStock >= 1
     };
     this.quantityInStock = quantityInStock;
 };
 
-const Fruit = new Product ('Apple', 100, 0);
+const fruitApple = new Product('Apple', 100, 0);
+const fruitBanana = new Product('Banana', 50, 25);
+const Milk = new Product('Milk', 22, 0);
 const Meat = new Product('Chiken', 500, 132);
-console.log(Fruit);
-console.log(Meat); 
+const Egg = new Product('Eggs', 5, 600);
+ 
+const arrayProducts = [fruitApple, fruitBanana, Milk, Meat, Egg];
+console.log(arrayProducts);
+
+/* 14. Отфильтровать массив продуктов по тому есть ли они на складе. 
+Потом по количеству на складе больше 5 шт. (filter().filter()) */
+
+const arrayAvailable = arrayProducts.filter((object) =>{
+    return object.quantityInStock >=1;
+});
+
+console.log(arrayAvailable);
+
