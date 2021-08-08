@@ -91,12 +91,12 @@ const Product = function (productName, productPrice, quantityInStock){
 };
 
 const fruitApple = new Product('Apple', 100, 0);
-const fruitBanana = new Product('Banana', 50, 25);
+const fruitBanana = new Product('Banana', 50, 3);
 const Milk = new Product('Milk', 22, 0);
-const Meat = new Product('Chiken', 500, 132);
+const Chicken = new Product('Chiken', 500, 132);
 const Egg = new Product('Eggs', 5, 600);
  
-const arrayProducts = [fruitApple, fruitBanana, Milk, Meat, Egg];
+const arrayProducts = [fruitApple, fruitBanana, Milk, Chicken, Egg];
 console.log(arrayProducts);
 
 /* 14. Отфильтровать массив продуктов по тому есть ли они на складе. 
@@ -108,3 +108,38 @@ const arrayAvailable = arrayProducts.filter((object) =>{
 
 console.log(arrayAvailable);
 
+const arrayAvailableMoreFive = arrayProducts.filter((object) =>{
+    return object.quantityInStock >=5;
+});
+
+console.log(arrayAvailableMoreFive);
+
+/* 15. Создать массив Корзина.
+Спрашивать у пользователя ид (индекс продукта) через prompt который он хочет положить в корзину.
+_Клонировать_ в корзину обьект продукта по индексу выбранному пользователем. */
+
+
+/* const index = Number(prompt('Введите id продукта ,который хотите отложить.'));
+const basket = arrayProducts.slice(Number(index), Number(index+1));
+
+console.log(basket); */
+
+/* 16. Создать _шаблон_ обьекта Пользователь. Принимать параметры - username, age, isMale, password. */
+
+const User = function(username, age, isMale, password){
+    this.username = username;
+    this.age = age;
+    this.isMale = isMale;
+    this.password = password;
+};
+
+/* 17. В цикле (for или map) создать 5 пользователей (new User) и поместить их в массив users. 
+Имена, возрасты, пол, и пароль пусть зависят от индекса ("username1", "username2" ...). */
+
+const users = [];
+
+for (let i = 1; i <= 5; i++) {
+    users.push (new User('username'+i, 21+i, (i % 2 === 0? true: false), 1234 + i));
+}
+
+console.log(users);
